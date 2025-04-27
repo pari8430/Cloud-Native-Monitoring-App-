@@ -84,11 +84,12 @@ docker build -t monitoring-app .
 docker run -p 5000:5000 monitoring-app
 
 
-#### g. **Screenshots/Visuals**
-
-```markdown
 ## Screenshots
 
+Below are some screenshots of the Cloud Native Monitoring App's dashboard:
+
 ![Dashboard Screenshot](images/newplot.png)
+*Example of the monitoring dashboard showing AWS resource metrics.*
+
 
 
