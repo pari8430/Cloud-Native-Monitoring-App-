@@ -1,112 +1,85 @@
 # Cloud Native Monitoring App
 
-A cloud-native application designed to monitor and manage AWS resources using Kubernetes, Docker, and Flask. The app provides real-time monitoring of AWS services, enabling easy access to metrics and health statuses.
+This is a cloud-native monitoring app designed to monitor AWS resources and provide real-time metrics via a web dashboard. The app is built using Flask and containerized using Docker. It is deployed using Kubernetes for scalability and easy management.
 
-## Description
+## Table of Contents
+- [Project Setup](#project-setup)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-The Cloud Native Monitoring App is built to help users monitor their cloud infrastructure, specifically AWS resources, such as ECR and EKS. The app is containerized using Docker and orchestrated using Kubernetes for scalability and management. It features a user-friendly interface built with Flask to display monitoring metrics and logs.
+## Project Setup
 
-## Features
+### Prerequisites
 
-- **Real-time monitoring** of AWS services (ECR, EKS, etc.)
-- Scalable microservices architecture using **Kubernetes** and **Docker**
-- **Flask**-based web interface for interacting with the monitoring system
-- Easily deployable on any cloud-native platform
-- **AWS SDK (Boto3)** integration for fetching real-time metrics
-- Dockerized for isolated environment setup
-- Kubernetes deployments for high availability
-
-## Technologies Used
-
-- **AWS**: Amazon Elastic Container Registry (ECR), Amazon Elastic Kubernetes Service (EKS)
-- **Kubernetes**: For container orchestration and microservice deployment
-- **Docker**: Containerization for isolated development and deployment environments
-- **Flask**: Web framework for the user interface and application logic
-- **Python**: Main programming language
-- **Boto3**: AWS SDK for Python to interact with AWS resources
-- **Helm**: Kubernetes package manager for easier management of Kubernetes charts
-
-## Prerequisites
-
-Before you begin, ensure that you have the following installed on your system:
-
-- **Python 3.6+**: Install Python from [python.org](https://www.python.org/downloads/)
-- **Docker**: Install Docker from [docker.com](https://www.docker.com/products/docker-desktop)
-- **Kubernetes**: Install Kubernetes and set up a cluster (local or cloud)
-- **AWS CLI**: Install the AWS CLI and configure your AWS credentials (`aws configure`)
-- **kubectl**: Kubernetes CLI for interacting with your Kubernetes cluster
+- Docker
+- Python 3.x
+- Kubernetes Cluster (if deploying on Kubernetes)
+- AWS CLI configured with your AWS credentials
+- Access to ECR (Elastic Container Registry) to pull the Docker image
 
 ## Installation
 
-Follow these steps to set up the project on your local machine.
+1. Clone the repository:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/cloud-native-monitoring-app.git
-   cd cloud-native-monitoring-app
-
-
-2. **Set up a virtual environment:**
-
-The application uses the **`psutil`** and **`Flask`, Plotly, boto3** libraries. Install them using pip:
-```
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-
-```
-
-3. **Run the application**
-
-Install the required dependencies:
-
-```
-pip install -r requirements.txt
-
-```
-4. **Configure your AWS credentials (e.g., using aws configure):**
-    ```
-    aws configure
-    
+    ```bash
+    git clone https://github.com/your-username/cloud-native-monitoring-app.git
+    cd cloud-native-monitoring-app
     ```
 
-5. **Run the application:**
-   ```
-    python app.py
+2. Install the required Python dependencies:
 
- 
-   ```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
- 
-6. **Access the app through your local server (e.g., http://localhost:5000).**
+3. If deploying with Kubernetes, ensure you have the correct kubeconfig file set up for your cluster.
 
-#### f. **Usage**
-Explain how to use the application. Provide examples if applicable, such as how to interact with the app or access different features.
+## Running the Application
 
-```markdown
-## Usage
+### a. **Docker Setup**
+
+To run the app locally with Docker:
+
+1. Build the Docker image:
+
+    ```bash
+    docker build -t monitoring-app .
+    ```
+
+2. Run the Docker container:
+
+    ```bash
+    docker run -p 5000:5000 monitoring-app
+    ```
+
+This will start the Flask application on `http://localhost:5000`.
+
+### b. **Kubernetes Deployment**
+
+If deploying the app on Kubernetes, create the necessary deployments and services. Follow these steps:
+
+1. Create a Kubernetes deployment file (e.g., `deployment.yaml`) for the app.
+2. Apply the deployment:
+
+    ```bash
+    kubectl apply -f deployment.yaml
+    ```
+
+### c. **Access the App**
 
 Once the app is running, navigate to `http://localhost:5000` in your browser to view the monitoring dashboard. The dashboard will show real-time metrics of your AWS resources.
+
+## Usage
+
+Once the app is running, navigate to `http://localhost:5000` in your browser to view the monitoring dashboard. The dashboard will display real-time metrics such as CPU, memory usage, and other vital AWS resource information.
 
 Example commands to run the app with Docker:
 
 ```bash
 docker build -t monitoring-app .
 docker run -p 5000:5000 monitoring-app
-
-
-#### g. **Screenshots/Visuals**
-
-```markdown
-## Screenshots
-
-![newplot Screenshot](images/newplot.png)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Thank you to the developers of Flask, Docker, and Kubernetes for their excellent frameworks and tools.
-
 
