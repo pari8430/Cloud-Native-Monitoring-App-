@@ -82,7 +82,7 @@ Example commands to run the app with Docker:
 ```bash
 docker build -t monitoring-app .
 docker run -p 5000:5000 monitoring-app
-
+```
 
 ## Screenshots
 
