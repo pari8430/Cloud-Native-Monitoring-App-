@@ -11,6 +11,23 @@ This is a cloud-native monitoring app designed to monitor AWS resources and prov
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
+
+## Features
+
+- Real-time monitoring of AWS services (ECR, EKS, etc.)
+- Scalable with Kubernetes for cloud-native deployment
+- Containerized microservices using Docker
+- User-friendly UI built with Flask
+
+## Technologies Used
+
+- **AWS**: ECR, EKS
+- **Kubernetes**: Deployment and orchestration of containerized apps
+- **Docker**: Containerization
+- **Flask**: Web framework for the user interface
+- **Python**: Core programming language
+- **Boto3**: AWS SDK for Python
+
 ## Project Setup
 
 ### Prerequisites
@@ -89,7 +106,17 @@ docker run -p 5000:5000 monitoring-app
 Below are some screenshots of the Cloud Native Monitoring App's dashboard:
 
 ![Dashboard Screenshot](images/newplot.png)
+![Dashboard Screenshot](images/newplotnew.png)
 *Example of the monitoring dashboard showing AWS resource metrics.*
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thank you to the developers of Flask, Docker, and Kubernetes for their excellent frameworks and tools.
+
 
 
 
