@@ -69,10 +69,13 @@ pip install -r requirements.txt
 
 5. **Run the application:**
    ```
-python app.py
+    python app.py
 
-```   
-6. Access the app through your local server (e.g., http://localhost:5000).
+ 
+   ```
+
+ 
+6. **Access the app through your local server (e.g., http://localhost:5000).**
 
 #### f. **Usage**
 Explain how to use the application. Provide examples if applicable, such as how to interact with the app or access different features.
@@ -94,7 +97,7 @@ docker run -p 5000:5000 monitoring-app
 ```markdown
 ## Screenshots
 
-![Dashboard Screenshot](screenshot.png)
+![Dashboard Screenshot](newplot.png)
 
 ## License
 
