@@ -3,6 +3,8 @@
 This is a cloud-native monitoring app designed to monitor AWS resources and provide real-time metrics via a web dashboard. The app is built using Flask and containerized using Docker. It is deployed using Kubernetes for scalability and easy management.
 
 ## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
 - [Project Setup](#project-setup)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
