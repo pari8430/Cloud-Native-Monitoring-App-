@@ -64,7 +64,9 @@ pip install -r requirements.txt
 
 ```
 4. **Configure your AWS credentials (e.g., using aws configure):**
-    ```aws configure
+    ```
+    aws configure
+    
     ```
 
 5. **Run the application:**
@@ -97,7 +99,7 @@ docker run -p 5000:5000 monitoring-app
 ```markdown
 ## Screenshots
 
-![Dashboard Screenshot](newplot.png)
+![newplot Screenshot](images/newplot.png)
 
 ## License
 
